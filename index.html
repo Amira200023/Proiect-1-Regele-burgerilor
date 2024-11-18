@@ -1,0 +1,78 @@
+<html>
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Style+Script&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="style.css"/>
+        <title>Regele burgerilor</title>
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="container-fluid">
+                <h1 class="header-brand">
+                    <a href="index.html">Regele burgerilor</a>
+                </h1>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+<!--                RESTPOSIVE-->
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+		<!--       END  RESTPOSIVE-->		
+        </header>
+        <div class="content">
+            <div class="image">
+             <img src="ham.png">
+            </div>
+            <div class="text">
+             <h1>Bucură-te de un burger gustos  <span>la Regele burgerilor</span>  şi fă-ţi burtica fericită</h1>
+           <h2>Și fă-ţi burtica fericită</h2>
+           <a href="#">Comanda Acum</a>
+       </div>
+             </div>
+         </div>
+     </div>
+            </div>
+            
+        <footer class="footer">
+            <p>Copyright &copy; 2024 All rights reserved | Made with <i class="fas fa-heart"></i> by Regele burgerilor</p>
+        </footer>
+		<!-- RESTPOSIVE-->
+        <script>
+            let header=document.querySelector(".header");
+            let hamburgerMenu=document.querySelector(".hamburger-menu");
+            let navLinks=document.querySelectorAll(".nav-link");
+            hamburgerMenu.addEventListener("click",function(){
+                header.classList.toggle("menu-open"); /*se adauga-se scoate*/
+                
+            })
+        
+            navLinks.forEach(navLinks=>{
+                navLinks.addEventListener("click",()=>{
+                    header.classList.toggle("menu-open");
+                })
+            })
+        </script>
+		<!--  END RESTPOSIVE-->
+    </body>
+</html>
