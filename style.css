@@ -56,10 +56,9 @@ ul{
   align-items: center;
   height: 100%;
 }
-.header-brand{
-  font-weight: 500;
-}
+
 .header-brand a{
+  font-family: "Style Script", cursive;
   color:#000;
 }
 
@@ -71,8 +70,8 @@ ul{
   margin-left: 10rem;
 }
 .nav-link{
-  font-size:40px;
-  font-weight: 500;
+  font-size:100px;
+  font-weight: bold;
   color:#1B1212;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -88,7 +87,7 @@ ul li a:hover{
 }
 
 .nav-link.active{
-  color: #333;
+  color: #C70501;
 }
 
 .social-media{
@@ -131,7 +130,6 @@ content.text h1{
   letter-spacing: 2px;
 }
 .content .text span{
-  font-family: a;
   font-size: 40px;
   line-height: 25px;
   margin: 10px 0;
@@ -211,8 +209,77 @@ content.text h2{
   color: white;
   box-shadow: inset 0 -100px 0 0 #C70501;
 }
+/*END CONTENT*/
 
+/*START INGREDIENTE*/
+.ingrediente {
+  position: relative;
+}
+.ingrediente .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.ingrediente .text {
+  flex: 1;
+}
+.ingrediente .text h1 {
+  font-family: "Style Script", cursive;
+  color: #B75E09;   
+  font-size: 40px;
+  /* text-transform: uppercase; */
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.ingrediente .box img {
+  position: relative;
+  width: 600px;
+}
+.ingrediente .box img {
+  position: relative;
+  width: 600px;
+  animation: up-and-down 5s linear infinite;
+}
+.ingrediente .go-down {
+  color: var(--main-color);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transition);
+}
+.ingrediente .go-down:hover {
+  color: var(--main-color-alt);
+}
+.ingrediente .go-down i {
+  animation: bouncing 1.5s infinite;
+}
+/*END INGREDIENTE*/
 
+/* Start MENIU */
+.meniu {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+.meniu .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.meniu .box {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform var(--main-transition), box-shadow var(--main-transition);
+}
+.meniu .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
 
 /*MEDIA QUERY*/
 
@@ -272,3 +339,141 @@ content.text h2{
       font-size:2rem;
   }
 }
+
+/* START INGREDIENTE*/
+@media only screen and (max-width:900px){
+  .landing .text {
+    text-align: center;
+  }
+  .landing .text h2 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: -2px;
+}
+.landing .text p {
+  font-size: 23px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+  color: #666;
+  max-width: 500px;
+}
+.landing .image img {
+  position: relative;
+  width: 600px;
+}
+}
+/*END INGREDIENTE*/
+
+/*START MENIU*/
+.meniu{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax 300px, 1fr);
+  gap: 30px;
+}
+.meniu  .box {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  border-radius: 6px;
+  position: relative;
+}
+.meniu  .box img {
+  position: relative;/*Eliminarea pozitiei absoluta pt a preveni suprapunerea*/
+  width: 100%;/*Dimensiune fixa pt img*/
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 5px solid #B75E09;
+}
+.meniu h4 {
+  color: #B75E09;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.meniu  .box .title {
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.meniu  .box p {
+  font-size: larger;
+  line-height: 1.5;
+  color: #575757;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/*END MENIU */
+
+/*START REVIEWS*/
+.reviews {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+}
+.reviews .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.reviews  .box {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  border-radius: 6px;
+  position: relative;
+}
+.reviews  .box img {
+  position: absolute;
+  right: -10px;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--section-background);
+}
+.reviews   h2 {
+  color: #B75E09;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.reviews  .box .title {
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+.reviews  .box .rate .filled {
+  color: #ffc107;
+}
+.reviews  .box p {
+  line-height: 1.5;
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/*END REVIEWS*/
+
+/*START FOOTER*/
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 70px 0 0;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/*END FOOTER*/
